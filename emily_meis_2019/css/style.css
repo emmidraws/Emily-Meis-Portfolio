@@ -1,0 +1,283 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*	A CSS rule has the following syntax:
+selector { property: style; property: style; property: style; }
+
+For a list of CSS properties, see the w3Schools website @ http://www.w3schools.com/css/css_reference.asp */
+
+/* This will be for the Homepage and the about me page!!! */
+
+
+/*	Emily
+October 25, 2018
+==================================================
+Table of Contents
+==================================================
+:: Typography
+:: Layout
+*/
+/*	Typography
+================================================== */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Thasadith');
+
+h1, h2, h3, h4, nav, .sidebar a { font-family: 'Roboto', sans-serif; color: #5d5e60;}
+h1, h2, h3, h4 {background-color: rgba(255, 255, 255, 1);}
+h2 { color: #e39e92; }
+
+p, ul, ol, figure, footer, .text, article { font-family: 'Thasadith', sans-serif; color: #5d5e60;}
+.text /*ul, ol*/ {background-color: rgba(255, 255, 255, 1);}
+footer p { font-size: .8em; }
+h1 {font-size: 4.5em; padding: 10%; border-bottom: 2px solid #8e8c8f; border-top: 2px solid #8e8c8f; }
+h2 { font-size: 5em; }
+h3 { font-size: 4em; }
+h4 { font-size: 2em; margin: 0; padding: 1px;}
+article h4 { font-size: 1em }
+ol, ul {font-size: 1.7em; margin-top: 0; margin-bottom: 0;}
+a:link, ul, ol { text-decoration: none; list-style-type: none; }
+.text /*ul, ol*/ { border-top: 1px solid #8e8c8f; border-bottom: 1px solid #8e8c8f; }
+.container { max-width: 100vw; padding: 20px; margin: 0 10px 0 75px; }
+
+.sub-head { font-size: .5em; letter-spacing: .30em; color: #e39e92; }
+
+a:link { color: black;}
+a:visited { color: #8e8c8f; }
+a:hover { color: #e39e92; text-decoration: underline; }
+a:active { color: black; text-decoration: none; }
+li { margin: 3% 0 0 0; }
+
+hr { border: .5px solid #8e8c8f;}
+.foot { color: #e39e92; background-color: rgba(255, 255, 255, .8);}
+
+article { background-color: rgba(255, 255, 255, .8); }
+article p { font-size: .8em; }
+/*	Layout
+================================================== */
+body { background-image: url(kick-ass.jpg); background-size: cover; background-position: center center; background-attachment: fixed;}
+.container { background-color: rgba( 000, 000, 000, .2);
+overflow: inherit; }
+
+
+body {margin: 0; text-align: center; }
+footer { padding: 1%; color: white;  }
+
+/*left and right links=============
+====================================*/
+.rightlink { max-width: 75%; clear: none; float: right; ;text-align: left; padding-right: 30%; margin-top: 0; margin-bottom: 0;}
+.leftlink { max-width: 20%; clear: none; float: left; margin-left: 25%; padding: 0; margin-top: 0; margin-bottom: 0; }
+
+
+
+header { height: 100vh; padding-top: 100px; }
+
+
+.id-one { margin-top: 20px; }
+
+button:hover { color: #e39e92; }
+button:link { color: #8e8c8f; }
+
+
+/*================================================= */
+@media screen and (max-width: 600px) {
+    .container { border: 2px solid #e39e92; }
+    .material-icons { display: block; text-align: center; margin-top: 20px; font-size: 4em; }
+    h1 { font-size: 2.5em; }
+    .emilym article { font-size: .8em;}
+.emilym h2 { font-size: 1.5em;}
+}
+/* Small devices (portrait tablets and large phones, 767px to 600px) */
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    .container { border: 2px solid black; }
+    h1 { font-size: 3.5em; }
+    h2 { font-size: 2.5em; }
+    h3 { font-size: 2em; }
+    ol, ul {font-size: 1em; }
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 20px;}
+    .material-icons { display: block; text-align: center; margin-top: 20px; font-size: 4em;  text-decoration: none;}
+
+}
+
+
+/* Medium devices (landscape tablets, 768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .container { border: 2px solid lavender; }
+    .material-icons { display: block; text-align: center; margin-top: 20px; font-size: 3em; }
+.emilym article { font-size: 1em;}
+.emilym h2 { font-size: 1.7em;}
+}
+
+
+/* Large devices (laptops/desktops, 769 to 992px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .container { border: 2px solid pink; }
+
+    .material-icons { display: block; text-align: center; margin-top: 40px; font-size: 2em; text-decoration: none;}
+    .emilym article { font-size: 1em;}
+.emilym h2 { font-size: 2em;}
+
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .material-icons { display: block; text-align: center; margin-top: 40px; font-size: 2em; text-decoration: none;}
+    .container { border: 2px solid #e39e92; }
+.emilym article { font-size: 1.76em;}
+.emilym h2 { font-size: 4em;}
+}
+
+
+/* collapse sidebar
+===================================*/
+
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #5d5e60;
+    overflow-x: hidden;
+    transition: 0.8s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 0px 0 50px 0px;
+    text-decoration: none;
+    color: #ffff;
+    display: block;
+    transition: 0.3s;
+    font-size: 1.5em;
+    overflow: hidden;
+
+}
+nav { padding-top: 40px;}
+
+
+.sidebar a:hover {
+    color: #e39e92;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    font-size: 4em;
+    padding: 0 20px 0 20px;
+}
+
+.openbtn {
+    font-size: 2em;
+    cursor: pointer;
+    background-color: #5d5e60;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed; top: 20px; left: 25px;
+}
+
+.openbtn:hover {
+    background-color: #e39e92;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+/* Pcture Show
+==========================*/
+.containers { max-width: 50%; padding: 3%; margin: auto; }
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.containers {
+  position: relative; float: right;
+}
+
+.emilym { max-width: 50%; padding: 2%; float: left;}
+
+.emilym p {font-size: 1em; }
+
+.aboutem { height: 100vh; margin: 7%; background-color: rgba(255, 255, 255, 1); }
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+
+  width: 40px;
+  padding: 16px;
+  margin-top: 10px;
+  color: lightcoral;
+  font-weight: bold;
+  font-size: 30px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+    text-decoration: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 10px;
+  border-radius: 3px 0 0 3px;  text-decoration: none;
+}
+.prev { left: 10px; }
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.5);  text-decoration: none;
+}
+
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.material-icons { text-decoration: none; color: salmon; }
+td {text-align: center;}
